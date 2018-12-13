@@ -18,7 +18,6 @@ namespace Benlumia007\Backdrop\CustomQuery;
  * Table of Content
  *
  * 1.0 - Loop (Blog)
- * 2.0 - Loop (Jetpack Portfolio)
  */
 
 /**
@@ -52,56 +51,3 @@ function display_custom_blog() {
 	}
 }
 add_action( 'display_custom_blog', __NAMESPACE__ . '\output_custom_blog' );
-
-/**
- * 2.0 - Loop (Jetpack Portfolio)
- */
-function display_custom_jetpack_portfolio() {
-	if ( is_front_page() && ! is_home() ) {
-		$posts_per_page = get_option( 'jetpack_portfolio_posts_per_page' );
-		$query          = new WP_Query(
-			array(
-				'post_type'      => 'jetpack-portfolio',
-				'posts_per_page' => $posts_per_page,
-			)
-		);
-		if ( $query->have_posts() ) {
-			while ( $query->have_posts() ) {
-				$query->the_post();
-				if ( has_post_thumbnail() ) {
-					?>
-						<div class="jetpack-portfolio-items">
-							<a href="<?php echo esc_url( get_permalink() ); ?>">
-								<?php the_post_thumbnail( 'backdrop-portfolio-thumbnails' ); ?>
-							</a>
-							<div class="wp-caption">
-								<div class="wp-caption-text">
-									<h3 class="jetpack-portfolio-title"><a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_post_thumbnail_caption(); ?></a></h3>
-									<small><?php echo esc_html( get_post_field( 'post_content' ), get_post_thumbnail_id() ); ?></small>
-								</div>
-							</div>
-						</div>
-				<?php
-				}
-			}
-			wp_reset_postdata();
-		}
-	} else {
-		while ( have_posts() ) :
-			the_post();
-		?>
-			<div class="jetpack-portfolio-items">
-				<a href="<?php echo esc_url( get_permalink() ); ?>">
-					<?php the_post_thumbnail( 'backdrop-portfolio-thumbnails' ); ?>
-				</a>
-				<div class="wp-caption">
-					<div class="wp-caption-text">
-						<h3 class="jetpack-portfolio-title"><a href="<?php echo esc_url( get_permalink() ); ?>"><?php the_title(); ?></a></h3>
-						<small><?php echo esc_html( get_post( get_post_thumbnail_id() ) )->post_content; ?></small>
-					</div>
-				</div>
-			</div>
-	<?php
-	endwhile;
-	}
-}
