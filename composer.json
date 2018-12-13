@@ -1,0 +1,21 @@
+{
+    "name": "benlumia007/initiator",
+    "description": "Initiator is a starter theme that allows you to create a WordPress theme.",
+    "keywords": [
+        "wordpress",
+        "wordpress-theme"
+    ],
+    "homepage": "https://getbenonit.com/themes/initiator",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Benjamin Lu",
+            "email": "benlumia007@gmail.com",
+            "homepage": "https://getbenonit.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.6",
+        "benlumia007/backdrop-core": "^1.0.0"
+    }
+}
