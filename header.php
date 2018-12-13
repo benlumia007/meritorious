@@ -18,6 +18,7 @@
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+<?php Benlumia007\Backdrop\Menu\display_social(); ?>
 <section id="container" class="site-container">
 	<header id="header" class="site-header">
 		<div class="site-branding">
