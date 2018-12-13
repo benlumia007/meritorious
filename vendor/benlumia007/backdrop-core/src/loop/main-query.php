@@ -20,8 +20,6 @@ namespace Benlumia007\Backdrop\MainQuery;
  *  2.0 - Loop (Content Single)
  *  3.0 - Loop (Content Page)
  *  4.0 - Loop (Content Archive)
- *  5.0 - Loop (Content Jetpack Portfolio)
- *  6.0 - Loop (Content Archive Jetpack Portfolio)
  */
 
 /**
@@ -83,39 +81,5 @@ function display_content_archive() {
 			the_posts_pagination();
 	else :
 			get_template_part( 'views/content/content', 'none' );
-	endif;
-}
-
-/**
- *  5.0 - Loop (Content Jetpack Portfolio)
- */
-function display_jetpack_portfolio() {
-	while ( have_posts() ) :
-		the_post();
-		get_template_part( 'views/jetpack-portfolio/content', 'jetpack-portfolio' );
-	endwhile;
-	the_posts_navigation(
-		array(
-			'prev_text' => '<span class="post-previous" aria-hidden="true">' . esc_html__( 'Older', 'backdrop' ) . '</span><span class="post-title">Projects</span>',
-			'next_text' => '<span class="post-next" aria-hiddent="true">' . esc_html__( 'Newer', 'backdrop' ) . '</span><span class="post-title">Projects</span>',
-		)
-	);
-	comments_template();
-}
-
-/**
- *  6.0 - Loop (Content Archive Jetpack Portfolio)
- */
-function display_jetpack_portfolio_archive() {
-	if ( have_posts() ) :
-		get_template_part( 'views/jetpack-portfolio/content', 'archive-jetpack-portfolio' );
-		the_posts_navigation(
-			array(
-				'prev_text' => '<span class="post-previous" aria-hidden="true">' . esc_html__( 'Older', 'backdrop' ) . '</span><span class="post-title">Projects</span>',
-				'next_text' => '<span class="post-next" aria-hiddent="true">' . esc_html__( 'Newer', 'backdrop' ) . '</span><span class="post-title">Projects</span>',
-			)
-		);
-	else :
-		get_template_part( 'views/content/content', 'none' );
 	endif;
 }
