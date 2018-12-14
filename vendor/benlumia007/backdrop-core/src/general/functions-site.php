@@ -89,7 +89,7 @@ function display_wp_link() {
  *  8.0 - General (Output WP Link)
  */
 function output_wp_link() {
-	return sprintf( '<a href="%s">%s</a>', esc_url( __( 'https://wordpress.org', 'backdrop' ) ), esc_html__( 'WordPress', 'backdrop' ) );
+	return sprintf( '<a href="%s">%s</a>', esc_url( __( 'https://wordpress.org', 'meritorious' ) ), esc_html__( 'WordPress', 'meritorious' ) );
 }
 
 /**

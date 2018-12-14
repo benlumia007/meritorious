@@ -53,8 +53,8 @@ function load_scripts_and_styles() {
 		'backdrop-navigation',
 		'backdropScreenReaderText',
 		array(
-			'expand'   => '<span class="screen-reader-text">' . esc_html__( 'expand child menu', 'backdrop' ) . '</span>',
-			'collapse' => '<span class="screen-reader-text">' . esc_html__( 'collapse child menu', 'backdrop' ) . '</span>',
+			'expand'   => '<span class="screen-reader-text">' . esc_html__( 'expand child menu', 'meritorious' ) . '</span>',
+			'collapse' => '<span class="screen-reader-text">' . esc_html__( 'collapse child menu', 'meritorious' ) . '</span>',
 		)
 	);
 

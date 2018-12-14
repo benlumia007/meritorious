@@ -25,9 +25,9 @@ function initiator_load_custom_header() {
 	$args = array(
 		'default-text-color' => 'ffffff',
 		'default-image'      => get_theme_file_uri( '/assets/images/header-image.jpg' ),
-		'height'             => 300,
+		'height'             => 1200,
 		'max-width'          => 2000,
-		'width'              => 1170,
+		'width'              => 2000,
 		'flex-height'        => false,
 		'flex-width'         => false,
 	);
@@ -37,7 +37,7 @@ function initiator_load_custom_header() {
 			'header-image' => array(
 				'url'           => '%s/assets/images/header-image.jpg',
 				'thumbnail_url' => '%s/assets/images/header-image.jpg',
-				'description'   => esc_html__( 'Header Image', 'initiator' ),
+				'description'   => esc_html__( 'Header Image', 'meritorious' ),
 			),
 		)
 	);
@@ -72,6 +72,7 @@ function initiator_header_image_inline_style_setup() {
 		.site-header.header-image{
 			background: url({$header_image});
 			background-repeat: no-repeat;
+			background-position: center;
 		}
 	";
 	wp_add_inline_style( 'backdrop-style', $custom_css );

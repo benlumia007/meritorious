@@ -20,6 +20,7 @@
 			<div class="content-area">
 				<?php Benlumia007\Backdrop\MainQuery\display_content_post_format(); ?>
 			</div>
+			<?php Benlumia007\Backdrop\Sidebar\display_primary(); ?>
 		</div>
 	</section>
 <?php get_footer(); ?>

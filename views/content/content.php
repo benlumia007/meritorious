@@ -10,7 +10,9 @@
 
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php Benlumia007\Backdrop\Entry\display_entry_post_thumbnail(); ?>
+	<div class="post-thumbnail">
+		<?php Benlumia007\Backdrop\Entry\display_entry_post_thumbnail(); ?>
+	</div>
 	<header class="entry-header">
 		<?php Benlumia007\Backdrop\Entry\display_entry_title(); ?>
 		<span class="entry-timestamp"><?php Benlumia007\Backdrop\Entry\display_entry_timestamp(); ?></span>

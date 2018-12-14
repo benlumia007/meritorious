@@ -28,12 +28,8 @@ namespace Benlumia007\Backdrop\Entry;
  */
 function display_entry_post_thumbnail() {
 	if ( has_post_thumbnail() ) {
-		if ( is_home() ) {
-			the_post_thumbnail( 'backdrop-small-thumbnails' );
-		} else {
-			$size = 'no-sidebar' === get_theme_mod( 'global_layout', 'no-sidebar' ) ? 'large' : 'medium';
-			the_post_thumbnail( "backdrop-{$size}-thumbnails" );
-		}
+		$size = 'no-sidebar' === get_theme_mod( 'global_layout', 'no-sidebar' ) ? 'large' : 'medium';
+		the_post_thumbnail( "backdrop-{$size}-thumbnails" );
 	}
 }
 
@@ -54,7 +50,7 @@ function display_entry_posted_on() {
 		esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
 		esc_attr(
 			// Translators: 1 = get the author.
-			sprintf( __( 'View all posts by %s', 'backdrop' ), get_the_author() )
+			sprintf( __( 'View all posts by %s', 'meritorious' ), get_the_author() )
 		),
 		get_the_author()
 	);
@@ -86,7 +82,7 @@ function display_entry_timestamp() {
 	);
 	$posted_on   = sprintf(
 		// Translators: 1 = screen reader text, 2 = post date.
-		__( '%1$s %2$s', 'backdrop' ),
+		__( '%1$s %2$s', 'meritorious' ),
 		'<span class="screen-reader-text">Posted on</span>',
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
@@ -110,19 +106,19 @@ function display_entry_title() {
  *  5.0 - General (Entry Taxonomies)
  */
 function display_entry_taxonomies() {
-	$cat_list = get_the_category_list( esc_html__( ' | ', 'backdrop' ) );
-	$tag_list = get_the_tag_list( '', esc_html__( ' | ', 'backdrop' ) );
+	$cat_list = get_the_category_list( esc_html__( ' | ', 'meritorious' ) );
+	$tag_list = get_the_tag_list( '', esc_html__( ' | ', 'meritorious' ) );
 	if ( $cat_list ) {
 		printf(
 			'<div class="cat-link"><i class="fa fa-folder-open-o"></i> %1$s <span class="cat-list"l><b><i>%2$s</i></b></span></div>',
-			esc_html__( ' Posted In', 'backdrop' ),
+			esc_html__( ' Posted In', 'meritorious' ),
 			$cat_list
 		); // WPCS XSS OK.
 	}
 	if ( $tag_list ) {
 		printf(
 			'<div class="tag-link"><i class="fa fa-tags"></i> %1$s <span class="tag-list"><b><i>%2$s</i></b></span></div>',
-			esc_html__( ' Tagged', 'backdrop' ),
+			esc_html__( ' Tagged', 'meritorious' ),
 			$tag_list
 		); // WPCS XSS OK.
 	}
