@@ -18,7 +18,7 @@
 			<?php
 				printf(
 					// Translators: 1 = Date, 2 = Site Link.
-					esc_html__( 'Copyright &#169; %1$s. %2$s', 'initiator' ),
+					esc_html__( 'Copyright &#169; %1$s. %2$s', 'meritorious' ),
 					absint( date_i18n( 'Y' ) ),
 					Benlumia007\Backdrop\Site\output_site_link()
 				); // WPCS XSS OK.
@@ -27,7 +27,7 @@
 			<?php
 				printf(
 					// Translators: 1 = WordPress Link, 2 = Theme Link.
-					esc_html__( 'Powered By %1$s and %2$s', 'initiator' ),
+					esc_html__( 'Powered By %1$s and %2$s', 'meritorious' ),
 					Benlumia007\Backdrop\Site\output_wp_link(),
 					Benlumia007\Backdrop\Site\output_theme_link()
 				); // WPCS XSS OK.
