@@ -1,6 +1,6 @@
 <?php
 /**
- *  Backdrop Core (primary.php)
+ *  Backdrop Core (secondary.php)
  *
  *  @package        Backdrop Core
  *  @copyright      Copyright (C) 2018. Benjamin Lu
@@ -17,15 +17,15 @@ namespace Benlumia007\Backdrop\Sidebar;
 /**
  *  Table of Content
  *
- *  1.0 - Sidebar (Primary)
+ *  1.0 - Sidebar (secondary)
  */
 
 /**
- *  1.0 - Sidebar (Primary)
+ *  1.0 - Sidebar (secondary)
  */
 function display_secondary() { ?>
 	<div id="widget-area" class="widget-area">
-		<?php if ( ! dynamic_sidebar( 'primary-sidebar' ) ) { ?>
+		<?php if ( ! dynamic_sidebar( 'secondary-sidebar' ) ) { ?>
 			<?php
 				the_widget(
 					'WP_Widget_Categories',
