@@ -18,12 +18,15 @@
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-<?php Benlumia007\Backdrop\Menu\display_social(); ?>
+<div id="social" class="social-navigation">
+	<?php Benlumia007\Backdrop\Menu\display_social(); ?>
+</div>
 <section id="container" class="site-container">
-	<header id="header" class="site-header">
+	<header id="header" class="site-header header-image">
 		<div class="site-branding">
 			<?php Benlumia007\Backdrop\Site\display_site_title(); ?>
 			<?php Benlumia007\Backdrop\Site\display_site_description(); ?>
 		</div>
-		<?php Benlumia007\Backdrop\Menu\display_primary(); ?>
+	</header>
+	<?php Benlumia007\Backdrop\Menu\display_primary(); ?>
 	<section id="content" class="site-content">
