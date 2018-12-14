@@ -416,7 +416,7 @@ body {
 
 .site-header .site-branding .site-title a {
 	color: #ffffff;
-	font-size: 1.750em;
+	font-size: 1.5em;
 }
 
 .site-header .site-branding .site-description {
@@ -428,17 +428,17 @@ body {
  */
 .site-main {
 	margin: 1.125em auto;
-	max-width: 75.375em;
+	max-width: 73.125em;
 }
 
 .left-sidebar .content-area {
     float: right;
-    width: 70.149253731343284%;
+    width: 69.230769230769231%;
 }
 
 .right-sidebar .content-area {
     float: left;
-    width: 70.149253731343284%; 
+    width: 69.230769230769231%; 
 }
 
 /**
@@ -446,12 +446,12 @@ body {
  */
 .left-sidebar .widget-area {
     float: left;
-    width: 28.358208955223881%;
+    width: 29.230769230769231%;
 }
 
 .right-sidebar .widget-area {
     float: right;
-    width: 28.358208955223881%;
+    width: 29.230769230769231%;
 }
 
 /**
