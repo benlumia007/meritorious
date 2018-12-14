@@ -1,8 +1,8 @@
 <?php
 /**
- * Initiator (content-page.php)
+ * Meritorious (content-page.php)
  *
- * @package     Initiator
+ * @package     Meritorious
  * @copyright   Copyright (C) 2018. Benjamin Lu
  * @license     GNU General Public License v2 or later (https://www.gnu.org/licenses/gpl-2.0.html)
  * @author      Benjamin Lu (https://getbenonit.com)
