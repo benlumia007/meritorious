@@ -81,7 +81,6 @@ array_map(
 	},
 	[
 		'primary',
-		'secondary',
 		'social',
 	]
 );
@@ -121,5 +120,6 @@ array_map(
 	},
 	[
 		'primary',
+		'secondary',
 	]
 );
