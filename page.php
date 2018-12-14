@@ -18,6 +18,7 @@
 			<div class="content-area">
 				<?php Benlumia007\Backdrop\MainQuery\display_content_page(); ?>
 			</div>
+			<?php Benlumia007\Backdrop\Sidebar\display_secondary(); ?>
 		</div>
 	</section>
 <?php get_footer(); ?>
