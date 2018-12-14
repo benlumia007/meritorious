@@ -1,11 +1,11 @@
 <?php
 /**
- * Meritorious (comments.php)
+ * Initiator (comments.php)
  *
- * @package     meritorious
+ * @package     Initiator
  * @copyright   Copyright (C) 2018. Benjamin Lu
  * @license     GNU General Public License v2 or later (https://www.gnu.org/licenses/gpl-2.0.html)
- * @author      Benjamin Lu (https://getbenonit.com)
+ * @author      Benjamin Lu (https://benjlu.com)
  */
 
 ?>
@@ -26,7 +26,7 @@ if ( post_password_required() ) {
 					printf( esc_html_x( 'One Comment', 'comments title', 'meritorious' ) );
 				} else {
 					// Translators: 1 = counts.
-					printf( esc_html( __nx( '%1$s Comment', '%1$s Comments', absint( $count ), 'comments title', 'meritorious' ), absint( number_format_i18n( $count ) ) ) );
+					printf( _nx( '%1$s Comment', '%1$s Comments', absint( $count ), 'comments title', 'meritorious' ), absint( number_format_i18n( $count ) ) ); // WPCS XSS OK.
 				}
 				?>
 			</h2>
