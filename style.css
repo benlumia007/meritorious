@@ -73,7 +73,11 @@ body {
 .site-header:before,
 .site-header:after,
 .site-content:before,
-.site-content:after {
+.site-content:after,
+.post-navigation:before,
+.post-navigation:after,
+.posts-navigation:before,
+.posts-navigation:after {
 	clear: both;
 	content: "";
 	display: table;
@@ -721,6 +725,7 @@ ol.children {
 
 
 .comment-form .comment-form-url {
+	clear: both;
     margin-bottom: 1.3em;
     width: 100%;
 }
