@@ -1,8 +1,8 @@
 <?php
 /**
- * Initiator (custom-header.php)
+ * Meritorious (custom-header.php)
  *
- * @package     Initiator
+ * @package     Meritorious
  * @copyright   Copyright (C) 2018. Benjamin Lu
  * @license     GNU General Public License v2 or later (https://www.gnu.org/licenses/gpl-2.0.html)
  * @author      Benjamin Lu (https://getbenonit.com)
@@ -18,7 +18,7 @@
 /**
  *  1.0 - Includes (Custom Header)
  */
-function initiator_load_custom_header() {
+function meritorious_load_custom_header() {
 	/**
 	 * Enable add_theme_support( 'custom-header', $args );. This feature allows you to use custom header to display images.
 	 */
@@ -42,12 +42,12 @@ function initiator_load_custom_header() {
 		)
 	);
 }
-add_action( 'after_setup_theme', 'initiator_load_custom_header' );
+add_action( 'after_setup_theme', 'meritorious_load_custom_header' );
 
 /**
  *  2.0 - Includes (Custom Header Styles)
  */
-function initiator_custom_header_styles_setup() {
+function meritorious_custom_header_styles_setup() {
 	$text_color = get_header_textcolor();
 	if ( get_theme_support( 'custom-header', 'default-text-color' ) === $text_color ) {
 		return;
@@ -61,12 +61,12 @@ function initiator_custom_header_styles_setup() {
 	";
 	wp_add_inline_style( 'backdrop-style', $custom_css );
 }
-add_action( 'wp_enqueue_scripts', 'initiator_custom_header_styles_setup' );
+add_action( 'wp_enqueue_scripts', 'meritorious_custom_header_styles_setup' );
 
 /**
  *  2.0 - Includes (Custom Header Styles)
  */
-function initiator_header_image_inline_style_setup() {
+function meritorious_header_image_inline_style_setup() {
 	$header_image = esc_url( get_theme_mod( 'header_image', get_theme_file_uri( '/assets/images/header-image.jpg' ) ) );
 	$custom_css   = "
 		.site-header.header-image{
@@ -77,4 +77,4 @@ function initiator_header_image_inline_style_setup() {
 	";
 	wp_add_inline_style( 'backdrop-style', $custom_css );
 }
-add_action( 'wp_enqueue_scripts', 'initiator_header_image_inline_style_setup' );
+add_action( 'wp_enqueue_scripts', 'meritorious_header_image_inline_style_setup' );
