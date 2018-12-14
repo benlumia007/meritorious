@@ -28,14 +28,14 @@ function initiator_compatibility_check() {
 	if ( version_compare( $GLOBALS['wp_version'], '4.9.6', '<' ) ) {
 		return sprintf(
 			// translators: 1 =  a version string, 2 = current wp version string.
-			__( 'Initiator requires at least WordPress version %1$s. You are currently running %2$s. Please upgrade and try again.', 'initiator' ),
+			__( 'Initiator requires at least WordPress version %1$s. You are currently running %2$s. Please upgrade and try again.', 'meritorious' ),
 			'4.9.6',
 			$GLOBALS['wp_version']
 		);
 	} elseif ( version_compare( PHP_VERSION, '5.6', '<' ) ) {
 		return sprintf(
 			// translators: 1 =  a version string, 2 = current wp version string.
-			__( 'Initiator requires at least PHP version %1$s. You are currently running %2$s. Please upgrade and try again.', 'initiator' ),
+			__( 'Initiator requires at least PHP version %1$s. You are currently running %2$s. Please upgrade and try again.', 'meritorious' ),
 			'5.6',
 			PHP_VERSION
 		);
@@ -67,10 +67,10 @@ function initiator_upgrade_notice() {
  */
 function initiator_load_theme_setup() {
 	/**
-	 * The load_theme_textdomain( 'initiator' );. This should translate all translation in the theme. If there is a
+	 * The load_theme_textdomain( 'meritorious' );. This should translate all translation in the theme. If there is a
 	 * second text-domain, it should ignore since translation only takes the primary text domain.
 	 */
-	load_theme_textdomain( 'initiator' );
+	load_theme_textdomain( 'meritorious' );
 }
 add_action( 'after_setup_theme', 'initiator_load_theme_setup' );
 
@@ -91,6 +91,5 @@ array_map(
 	[
 		'custom-background',
 		'custom-header',
-		'custom-logo',
 	]
 );
