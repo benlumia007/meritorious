@@ -183,7 +183,9 @@ a:focus {
  *  8.0 - Content (Posts and Pages)
  */
 .content-area .post .entry-content,
-.content-area .post .entry-excerpt {
+.content-area .post .entry-excerpt,
+.content-area .page .entry-content,
+.content-area .page .entry-excerpt {
 	line-height: 1.7em;
 }
 
