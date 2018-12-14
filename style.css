@@ -992,6 +992,39 @@ p.comment-awaiting-moderation {
 /**
  * 20.0 - Media Queries (Mobile Small 37.5em (600px))
  */
+ @media screen and (min-height: 30.063em) and (max-width: 37.50em) {
+    .menu-toggle,
+    .primary-navigation.toggled ul {
+        display: block;
+    }
+    
+	.primary-navigation ul {
+		display: none;
+	}
+    
+    .primary-navigation.toggled {
+        padding: 0.1em;
+    }
+    
+    .nav-menu {
+        margin-bottom: 3.6em;
+    }
+    
+    .primary-navigation .nav-menu {
+        display: none;
+    }
+    
+    .primary-navigation.toggled .nav-menu {
+        display: block;
+        margin: 1em 1em 3.6em 1em;
+    }
+    
+    .left-sidebar .content-area,
+    .right-sidebar .content-area {
+        float: none;
+        width: 100%;
+    }
+}
 
 /**
  * 21.0 - Media Queries (Mobile Medium 48.688em (667px))
