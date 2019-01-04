@@ -40,6 +40,9 @@ Not Available at this time
 == Upgrade Notice ==
 
 == Changelog ==
+Version: 1.0.1
+- Fixed Published Date
+
 Version: 1.0.0
 Initial Release
 
